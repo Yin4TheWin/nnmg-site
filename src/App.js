@@ -6,13 +6,17 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Homepage from './Components/Homepage'
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
+        <Route path="/signin">
           <SignIn/>
+        </Route>
+        <Route path="/">
+          <Homepage/>
         </Route>
       </Switch>
     </Router>

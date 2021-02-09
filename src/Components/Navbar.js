@@ -1,0 +1,47 @@
+import React from 'react';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    toolbar: {
+        justifyContent: 'flex-end',
+        overflowX: 'auto',
+        borderBottom: `1px solid ${theme.palette.divider}`,
+    },
+    toolbarLink: {
+      padding: theme.spacing(2),
+      flexShrink: 0,
+    },
+  }))
+
+export default function Navbar(){
+    const classes = useStyles()
+    return (<React.Fragment>
+        <Toolbar component="nav" variant="dense" className={classes.toolbar}>
+            <Link
+            color="inherit"
+            noWrap
+            variant="body2"
+            className={classes.toolbarLink}
+            > Our Games </Link>
+            <Link
+            color="inherit"
+            noWrap
+            variant="body2"
+            className={classes.toolbarLink}
+            > About </Link>
+            <Link
+            color="inherit"
+            noWrap
+            variant="body2"
+            className={classes.toolbarLink}
+            > Devblog </Link>
+            <Button variant="outlined" size="small">
+            Log In
+            </Button>
+        </Toolbar>
+    </React.Fragment>)
+}
