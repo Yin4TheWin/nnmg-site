@@ -12,7 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-
+import Disc from '../Images/discord.png'
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -55,8 +54,7 @@ export default function SignUp() {
         <Container component="main" maxWidth="xs">
           <CssBaseline />
           <div className={classes.paper}>
-            <Avatar className={classes.avatar}>
-              <LockOutlinedIcon />
+            <Avatar className={classes.avatar} src={Disc}>
             </Avatar>
             <Typography component="h1" variant="h5">
               Sign in
@@ -121,8 +119,7 @@ export default function SignUp() {
       return(      <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
+        <Avatar className={classes.avatar} src={Disc}>
         </Avatar>
         <Typography component="h1" variant="h5">
           Sign up using Discord
