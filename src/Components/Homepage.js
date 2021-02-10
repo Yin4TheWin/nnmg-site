@@ -103,7 +103,7 @@ export default function Homepage(){
       </Grid>
       <Typography variant="h3" id="contact" style={{textAlign:"center", paddingTop: "8vh", paddingBottom: "2vh"}}>Contact</Typography>
       <br/>
-      <Typography className={classes.aboutText}>Whether you have questions about the development process or feedback about the game, we're here to fulfill any NNMG-related request you might have. Click to expand the accordians below and see our various modes of contact.</Typography>
+      <Typography className={classes.aboutText}>Whether you have questions about the development process or feedback about the game, we're here to fulfill any NNMG-related request you might have. Click to expand the accordions below and see our various modes of contact.</Typography>
       <br/>
       <Accordion>
         <AccordionSummary
