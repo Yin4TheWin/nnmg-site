@@ -6,6 +6,10 @@ import AboutText from '../Texts/About'
 import Duke from '../Images/dukeAva.png'
 import Pulse from 'react-reveal/Pulse';
 import Markdown from 'markdown-to-jsx';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Paper, makeStyles, Typography, Grid, Avatar } from '@material-ui/core';
 
 const useStyles = makeStyles((theme)=>({
@@ -41,10 +45,11 @@ export default function Homepage(){
         </Paper>
         <Paper className={classes.aboutPaper}>
             <Pulse>
-                <Typography variant="h3" style={{textAlign:"center", paddingTop: "2vh", paddingBottom: "2vh"}}>Welcome to NNMG Studios</Typography>
+                <Typography variant="h3" id="about" style={{textAlign:"center", paddingTop: "2vh", paddingBottom: "2vh"}}>Welcome to NNMG Studios</Typography>
             </Pulse>
             <Markdown className={classes.aboutText}>{AboutText}</Markdown>
             <Typography variant="h5" fontWeight="fontWeightBold" m={1} style={{paddingTop: "2vh", paddingLeft: "2vw"}}>Meet the Team</Typography>
+            <br/>
         <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>
@@ -69,6 +74,63 @@ export default function Homepage(){
             </Paper>
             </Grid>
       </Grid>
+      <Typography variant="h3" style={{textAlign:"center", paddingTop: "8vh", paddingBottom: "2vh"}}>Contact</Typography>
+      <br/>
+      <Typography className={classes.aboutText}>Whether you have questions about the development process or feedback about the game, we're here to fulfill any NNMG-related request you might have. Click to expand the accordians below and see our various modes of contact.</Typography>
+      <br/>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+        <Typography>Game Updates and General Support</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            Join our Discord! Although the Devblog will cover major updates, day to day changes, down to the exact commits that are being pushed to Github, will be posted on our Discord server.
+            If you have questions about the game or its dev process, this is also where I'll likely respond the quickest. Here's the link to join: <a href="https://discord.gg/RUZNp3r">https://discord.gg/RUZNp3r</a>.
+            Hope to see you there, we'd be happy to have you!
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <br/>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+        <Typography>Applications for Dev Team</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            We're a small crew, and always looking for new people to join our team. If you have the time and are willing to apply, please send me an email at yin4thewin@gmail.com. I'd be honored to know that you think our projects are worth your time! We're currently looking for:<br/><br/>
+            -Programmer (Unity)<br/>
+            -Programmer (Web)<br/>
+            -Writer<br/>
+            -Artist<br/><br/>
+            Unfortunately we are unable to offer financial compensation at this time. Additionally I cannot guarantee that we will generate any revenue, much less profit. However, if you've ever wanted to make a video game, want a cool project for your resume, or just want to hang out with a chill team, I encourage you to contact me! And if we ever do make money, know that you will definitely be compensated accordingly.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <br/>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+        <Typography>Applications for Beta Testing</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+              QA/Beta Testers are an indispensable part of any good dev team. They catch bugs, point out loopholes and generally offer the feedback necessary to make a great game a reality. I haven't worked out the specifics yet, but I'm currently thinking of implementing a "drops" system where users active on the devblog/Discord can get access to early release builds. A user's activity can be measured by them creating an account on this site that is also linked to their Discord account (hence the log in button in the navbar).
+              While logged in, views and comments on the Devblog will contribute to that user's drop chances. I'll update this later when I work it all out, but in the meantime feel free to join the <a href="https://discord.gg/RUZNp3r">Discord</a> to stay tuned!
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <br/><br/><br/>
         </Paper>
     </React.Fragment>)
 }

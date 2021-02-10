@@ -29,14 +29,15 @@ export default function Navbar(){
             color="inherit"
             noWrap
             variant="body2"
+            href="#about"
             className={classes.toolbarLink}
-            > Our Games </Link>
+            > About </Link>
             <Link
             color="inherit"
             noWrap
             variant="body2"
             className={classes.toolbarLink}
-            > About </Link>
+            > Our Games </Link>
             <Link
             color="inherit"
             noWrap

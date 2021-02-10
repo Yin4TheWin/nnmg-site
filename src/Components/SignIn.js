@@ -69,7 +69,7 @@ export default function SignIn() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            NNMG Super Secret Portal
           </Typography>
           <form className={classes.form} noValidate>
             <TextField
@@ -99,7 +99,6 @@ export default function SignIn() {
               label="Remember me"
             />
             <Button
-              type="submit"
               fullWidth
               variant="contained"
               color="primary"
