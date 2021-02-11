@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Homepage from './Components/Homepage'
 import SignUp from './Components/SignUp'
+import Devlog from './Components/Devlog'
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
         </Route>
         <Route path='/signup'>
           <SignUp/>
+        </Route>
+        <Route path='/devlog'>
+          <Devlog/>
         </Route>
         <Route path="/">
           <Homepage/>

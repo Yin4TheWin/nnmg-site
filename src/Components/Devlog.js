@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar'
-import Hero from '../Images/hero.png'
-import AboutText from '../Texts/About'
+import Hero from '../Images/BlogHero.png'
+import AboutText from '../Texts/About.md'
 import Duke from '../Images/dukeAva.png'
 import Pulse from 'react-reveal/Pulse';
 import Markdown from 'markdown-to-jsx';
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme)=>({
           width: '88%',
       }
 }))
-export default function Homepage(){
+export default function Devlog(){
     const classes=useStyles();
     return(<React.Fragment>
         <Navbar/>
@@ -57,49 +57,21 @@ export default function Homepage(){
         </Paper>
         <Paper className={classes.aboutPaper}>
             <Pulse>
-                <Typography variant="h3" id="about" style={{textAlign:"center", paddingTop: "2vh", paddingBottom: "2vh"}}>Welcome to NNMG Studios</Typography>
+                <Typography variant="h3" id="about" style={{textAlign:"center", paddingTop: "2vh", paddingBottom: "2vh"}}>Welcome to the Devlog!</Typography>
             </Pulse>
-            <Markdown className={classes.aboutText}>{AboutText}</Markdown>
-            <Typography variant="h5" fontWeight="fontWeightBold" m={1} style={{paddingTop: "2vh", paddingLeft: "2vw"}}>Meet the Team</Typography>
             <br/>
-        <Grid container spacing={3}>
-            <Grid item xs={12} sm={6}>
-            <Paper className={classes.paper}>
-                <br></br>
-                <Avatar>Y</Avatar>
-                <br></br>
-                <Typography variant="h6">Franklin "YinFTW" Yin</Typography>
-                <br></br>
-                <Typography style={{width:'90%', margin:'auto'}}>Hi everyone! My name's Franklin (or Yin4TheWin), and I'm the developer for NNMG. I do all the code stuff for the game, and I made this site as well! If you want to see this site's code you can check it out <a href="https://github.com/Yin4TheWin/nnmg-site">here</a> on Github. I'm still pretty new to React, so feedback would be appreciated: hit me up at yin4thewin@gmail.com.<br/><br/>Other reasons to hit me up include questions about the game, loneliness, boredom or literally anything. We're also always open for new programmers, writers, voice actors or artists, so let me know about that too!</Typography>
-                <br></br>
-            </Paper>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-            <Paper className={classes.paper}>
-                <br></br>
-                <Avatar src={Duke}/>
-                <br></br>
-                <Typography variant="h6">Duke of Marlins (Name anon)</Typography>
-                <br></br>
-                <Typography style={{width:'90%', margin:'auto'}}>Duke of Marlins is your friendly fish for writing. The Duke of Marlins holds the following credits, as their subjects will testify under the threat of becoming undone: Saving the world multiple times, predicting the fate of the universe, being a really good writer, and coming up with the pre-production title of this game: MarlinQuest. If there are any queries or criticisms of the game, please ask someone else. They are solely responsible for 5% of the plot, and not actually programming. The Duke will update accordingly when they hear about it.<br/><br/></Typography>
-                <br></br>
-            </Paper>
-            </Grid>
-      </Grid>
-      <br/>
-      <Typography variant="h3" id="games" style={{textAlign:"center", paddingTop: "2vh", paddingBottom: "2vh"}}>Our Games</Typography>
-      <Markdown className={classes.aboutText}>{Quixotic}</Markdown>
-      <br/>
+      <Markdown className={classes.aboutText}>The devlog is a place for our dev team (though primarily me, YinFTW) to post updates about the game development process.</Markdown>
+      <br/><br/>
       <Grid container spacing={3} style={{margin:'auto', width:'98%'}}>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={6}>
             <GalleryEntry image={Title} title="Main Menu" caption="A look at the game's current menu scene (it's animated!). The crystal is a central element to Quixotic Quest: more will be revealed later."/>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={6}>
             <GalleryEntry image={Hero} title="A Tree" caption="The above is an in-game screenshot taken because I thought the sun looked really nice shining between the trees. All credit for the environment assets go to the Fantasy Adventure Environment asset on the Unity store."/>
           </Grid>
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={6}>
             <GalleryEntry image={Fight} title="Battle" caption="The linked video (see below) demonstrates the battle system that currently exists in the game. It also demoes a camera that moves around mid-fight, because I think it looks cool." button link='https://youtu.be/mspSiIVixHo'/>
-          </Grid><Grid item xs={12} sm={4}>
+          </Grid><Grid item xs={12} sm={6}>
             <GalleryEntry image={Cutscene} title="Demo: Cutscenes" caption="The initial cutscene system was a click-to-continue storybook-like experience. The current system plays more like a movie, though extended animated scenes are still a challenge. Click to see a demo of it below." button link='https://youtu.be/N90vSCB2ujo'/>
           </Grid>
       </Grid>
