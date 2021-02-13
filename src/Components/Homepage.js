@@ -98,9 +98,9 @@ export default function Homepage(){
             <GalleryEntry image={Hero} title="A Tree" caption="The above is an in-game screenshot taken because I thought the sun looked really nice shining between the trees. All credit for the environment assets go to the Fantasy Adventure Environment asset on the Unity store."/>
           </Grid>
           <Grid item xs={12} sm={4}>
-            <GalleryEntry image={Fight} title="Battle" caption="The linked video (see below) demonstrates the battle system that currently exists in the game. It also demoes a camera that moves around mid-fight, because I think it looks cool." button link='https://youtu.be/mspSiIVixHo'/>
+            <GalleryEntry image={Fight} title="Demo: Battle" caption="The linked video (click this card to view!) demonstrates the battle system that currently exists in the game. It also demoes a camera that moves around mid-fight, because I think it looks cool." click='https://youtu.be/mspSiIVixHo'/>
           </Grid><Grid item xs={12} sm={4}>
-            <GalleryEntry image={Cutscene} title="Demo: Cutscenes" caption="The initial cutscene system was a click-to-continue storybook-like experience. The current system plays more like a movie, though extended animated scenes are still a challenge. Click to see a demo of it below." button link='https://youtu.be/N90vSCB2ujo'/>
+            <GalleryEntry image={Cutscene} title="Demo: Cutscenes" caption="The initial cutscene system was a click-to-continue storybook-like experience. The current system plays more like a movie, though extended animated scenes are still a challenge. Click this card to see a demo of it." click='https://youtu.be/N90vSCB2ujo'/>
           </Grid>
       </Grid>
       <Typography variant="h3" id="contact" style={{textAlign:"center", paddingTop: "8vh", paddingBottom: "2vh"}}>Contact</Typography>

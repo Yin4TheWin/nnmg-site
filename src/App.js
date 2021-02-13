@@ -9,6 +9,7 @@ import {
 import Homepage from './Components/Homepage'
 import SignUp from './Components/SignUp'
 import Devlog from './Components/Devlog'
+import Posts from './Components/Posts'
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path='/signup'>
           <SignUp/>
+        </Route>
+        <Route path='/devlog/read'>
+          <Posts/>
         </Route>
         <Route path='/devlog'>
           <Devlog/>

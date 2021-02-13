@@ -1,10 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar'
 import Hero from '../Images/BlogHero.png'
-import AboutText from '../Texts/About.md'
-import Duke from '../Images/dukeAva.png'
 import Pulse from 'react-reveal/Pulse';
-import Markdown from 'markdown-to-jsx';
 import GalleryEntry from './GalleryEntry'
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -12,9 +9,8 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { Paper, makeStyles, Typography, Grid, Avatar } from '@material-ui/core';
 import Cutscene from '../Images/cutscene.png'
-import Title from '../Images/title.png'
 import Fight from '../Images/fight.png'
-import Quixotic from '../Texts/QuixoticQuest'
+import SFTLD from '../Images/SFTLD.png'
 
 
 const useStyles = makeStyles((theme)=>({
@@ -60,19 +56,13 @@ export default function Devlog(){
                 <Typography variant="h3" id="about" style={{textAlign:"center", paddingTop: "2vh", paddingBottom: "2vh"}}>Welcome to the Devlog!</Typography>
             </Pulse>
             <br/>
-      <Markdown className={classes.aboutText}>The devlog is a place for our dev team (though primarily me, YinFTW) to post updates about the game development process.</Markdown>
+      <Typography className={classes.aboutText}>The devlog is a place for our dev team (though primarily me, YinFTW) to post updates about the game development process. I'll try to post at least once a week, though knowing my work flow this will probably be wildly inaccurate: expect a few weeks of daily posts then months of silence, on repeat. Seriously though, I'll try to post at least once a week. Our writer Duke of Marlins may occasionally post as well. Lastly, I'll try adding an email list or something soon, so you can sign up for updates if you wish. In the meantime, feel free to join our Discord (linked on homepage).</Typography>
       <br/><br/>
       <Grid container spacing={3} style={{margin:'auto', width:'98%'}}>
           <Grid item xs={12} sm={6}>
-            <GalleryEntry image={Title} title="Main Menu" caption="A look at the game's current menu scene (it's animated!). The crystal is a central element to Quixotic Quest: more will be revealed later."/>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <GalleryEntry image={Hero} title="A Tree" caption="The above is an in-game screenshot taken because I thought the sun looked really nice shining between the trees. All credit for the environment assets go to the Fantasy Adventure Environment asset on the Unity store."/>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <GalleryEntry image={Fight} title="Battle" caption="The linked video (see below) demonstrates the battle system that currently exists in the game. It also demoes a camera that moves around mid-fight, because I think it looks cool." button link='https://youtu.be/mspSiIVixHo'/>
+            <GalleryEntry image={Fight} title="Battle" caption="The linked video (see below) demonstrates the battle system that currently exists in the game. It also demoes a camera that moves around mid-fight, because I think it looks cool." click='/devlog/read?id=1' desc="By YinFTW on 2/11/21"/>
           </Grid><Grid item xs={12} sm={6}>
-            <GalleryEntry image={Cutscene} title="Demo: Cutscenes" caption="The initial cutscene system was a click-to-continue storybook-like experience. The current system plays more like a movie, though extended animated scenes are still a challenge. Click to see a demo of it below." button link='https://youtu.be/N90vSCB2ujo'/>
+            <GalleryEntry image={SFTLD} title="Straight from the Lore Docs: Meet the Crew!" caption="Hello, and welcome to the first ever edition of Straight From the Lore Docs! This will be a mini-series on the Devlog that aims to share a little bit about the lore and story we've been working on for our games. There will be minimal edits, if any, between the actual content on our lore docs and this blog post, so some statements may seem a bit weird or out of context. Don't worry if that's the case, things will start to make sense as more and more of the lore is revealed!" click='/devlog/read?id=0' desc="By YinFTW and Duke of Marlins on 2/11/21"/>
           </Grid>
       </Grid>
       <Typography variant="h3" id="contact" style={{textAlign:"center", paddingTop: "8vh", paddingBottom: "2vh"}}>Contact</Typography>
