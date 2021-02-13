@@ -11,6 +11,7 @@ import { Paper, makeStyles, Typography, Grid, Avatar } from '@material-ui/core';
 import Cutscene from '../Images/cutscene.png'
 import Fight from '../Images/fight.png'
 import SFTLD from '../Images/SFTLD.png'
+import Post1Main from '../Images/Post1Main.png'
 
 
 const useStyles = makeStyles((theme)=>({
@@ -56,11 +57,11 @@ export default function Devlog(){
                 <Typography variant="h3" id="about" style={{textAlign:"center", paddingTop: "2vh", paddingBottom: "2vh"}}>Welcome to the Devlog!</Typography>
             </Pulse>
             <br/>
-      <Typography className={classes.aboutText}>The devlog is a place for our dev team (though primarily me, YinFTW) to post updates about the game development process. I'll try to post at least once a week, though knowing my work flow this will probably be wildly inaccurate: expect a few weeks of daily posts then months of silence, on repeat. Seriously though, I'll try to post at least once a week. Our writer Duke of Marlins may occasionally post as well. Lastly, I'll try adding an email list or something soon, so you can sign up for updates if you wish. In the meantime, feel free to join our Discord (linked on homepage).</Typography>
+      <Typography className={classes.aboutText}>The devlog is a place for our dev team to post updates about the game development process. I'll try to post at least once a week, though knowing my work flow this will probably be wildly inaccurate: expect a few weeks of daily posts then months of silence, on repeat. Seriously though, I'll try to post at least once a week. Our writer Duke of Marlins may occasionally post as well. Lastly, I'll try adding an email list or something soon, so you can sign up for updates if you wish. In the meantime, feel free to join our Discord (linked on homepage).</Typography>
       <br/><br/>
       <Grid container spacing={3} style={{margin:'auto', width:'98%'}}>
           <Grid item xs={12} sm={6}>
-            <GalleryEntry image={Fight} title="Battle" caption="The linked video (see below) demonstrates the battle system that currently exists in the game. It also demoes a camera that moves around mid-fight, because I think it looks cool." click='/devlog/read?id=1' desc="By YinFTW on 2/11/21"/>
+            <GalleryEntry image={Post1Main} title="New Moba/RPG Concept" caption="At the moment, Quixotic Quest is a traditional, turn-based RPG. But what if we could put a spin on this genre? What if we looked at two beloved game genres, took the best of both worlds (with a heavier emphasis on RPG) and tried to make something new out of it?" click='/devlog/read?id=1' desc="By YinFTW on 2/13/21"/>
           </Grid><Grid item xs={12} sm={6}>
             <GalleryEntry image={SFTLD} title="Straight from the Lore Docs: Meet the Crew!" caption="Hello, and welcome to the first ever edition of Straight From the Lore Docs! This will be a mini-series on the Devlog that aims to share a little bit about the lore and story we've been working on for our games. There will be minimal edits, if any, between the actual content on our lore docs and this blog post, so some statements may seem a bit weird or out of context. Don't worry if that's the case, things will start to make sense as more and more of the lore is revealed!" click='/devlog/read?id=0' desc="By YinFTW and Duke of Marlins on 2/11/21"/>
           </Grid>

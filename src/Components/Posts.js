@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar'
-import Hero from '../Images/BlogHero.png'
+import Post1Main from '../Images/Post1Main.png'
 import AboutText from '../Texts/About.md'
 import Pulse from 'react-reveal/Pulse';
 import Markdown from 'markdown-to-jsx';
@@ -48,8 +48,8 @@ const posts=[{
     title: "SFTLD 1: Meet the Crew",
     text: Post0
 },{
-    image: Hero,
-    title: "Hello World",
+    image: Post1Main,
+    title: "New Moba/RPG Concept",
     text: Post1
 }
 ]
